@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { VscChromeClose, VscThreeBars } from "react-icons/vsc";
+import { FaUserGraduate } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
@@ -13,27 +15,33 @@ const Navbar = () => {
     <div>
       <nav>
         <input type="checkbox" id="check" />
-        <label onClick={handleClick} for="check" class="checkbtn">
+        <label onClick={handleClick} htmlFor="check" className="checkbtn">
           {clicked ? <VscChromeClose /> : <VscThreeBars className="" />}
         </label>
-        <label class="logox">Logo</label>
+        <label className="logox">
+          <FaUserGraduate
+            style={{ display: "inline-block", marginTop: "-3px" }}
+          />{" "}
+          Teacher's Corner
+        </label>
         <ul>
           <li>
-            <a class="activex" href="#">
+            <Link to="/" className="activex">
+              {" "}
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to="/home">Tuition</Link>
           </li>
           <li>
-            <a href="#">Services</a>
+            <Link to="/home">Tutor request</Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link to="/home">Blogs</Link>
           </li>
           <li>
-            <a href="#">Feedback</a>
+            <Link to="/home">About</Link>
           </li>
         </ul>
       </nav>

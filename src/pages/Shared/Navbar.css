@@ -5,29 +5,28 @@
   list-style: none;
   box-sizing: border-box;
 }
-body {
-  font-family: montserrat;
-}
+
 nav {
+  font-family: montserrat;
   background: #2c3e50;
   height: 80px;
   width: 100%;
 }
 label.logox {
-  color: white;
-  font-size: 35px;
+  color: #ffd700;
+  font-size: 30px;
   line-height: 80px;
-  padding: 0 100px;
+  padding: 0 60px;
   font-weight: bold;
 }
 nav ul {
   float: right;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 nav ul li {
   display: inline-block;
   line-height: 80px;
-  margin: 0 5px;
+  margin: 0 0px;
 }
 nav ul li a {
   color: white;
@@ -57,13 +56,17 @@ a:hover {
 @media (max-width: 952px) {
   label.logox {
     font-size: 30px;
-    padding-left: 50px;
+    padding-left: 40px;
   }
   nav ul li a {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 @media (max-width: 858px) {
+  label.logox {
+    font-size: 25px;
+    padding-left: 30px;
+  }
   .checkbtn {
     display: block;
   }
